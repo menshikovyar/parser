@@ -36,7 +36,7 @@ main {
   padding: 20px;
   width: 300px;
   transition: transform 0.3s;
-  color: #333; /* Задать цвет текста */
+  color: #333; 
 }
 
 .article-card:hover {
@@ -49,7 +49,7 @@ main {
 
 .article-card a {
   text-decoration: none;
-  color: inherit; /* Наследовать цвет текста карточки */
+  color: inherit; 
 }
 
 .article-card a:hover {
