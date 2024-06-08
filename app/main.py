@@ -6,7 +6,6 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# URL для категории "Машинное обучение" на Хабре
 base_url = "https://habr.com/ru/hub/machine_learning/"
 
 async def fetch(session, url):
@@ -15,7 +14,7 @@ async def fetch(session, url):
             response.raise_for_status()
             logging.info(f"Fetching URL {url}")
             page_content = await response.text()
-            logging.debug(page_content[:1000])  # Логгируем первые 1000 символов ответа
+            logging.debug(page_content[:1000])  
             return page_content
     except aiohttp.ClientError as e:
         logging.error(f"Error fetching URL {url}: {e}")
@@ -29,7 +28,7 @@ async def fetch_articles(url):
             logging.info("Parsing articles")
             articles = []
 
-            # Обновленные селекторы для статей
+            
             article_elements = soup.select(".tm-article-snippet, .tm-articles-list__item, article")
             logging.debug(f"Found {len(article_elements)} article elements")
 
