@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Палитра нежных цветов */
+        .article-card:nth-child(1) { background-color: #f8bbd0; }
+        .article-card:nth-child(2) { background-color: #e1bee7; }
+        .article-card:nth-child(3) { background-color: #c5cae9; }
+        .article-card:nth-child(4) { background-color: #b2dfdb; }
+        .article-card:nth-child(5) { background-color: #fff9c4; }
+        .article-card:nth-child(6) { background-color: #ffccbc; }
+        .article-card:nth-child(7) { background-color: #d7ccc8; }
+        .article-card:nth-child(8) { background-color: #f0f4c3; }
+        .article-card:nth-child(9) { background-color: #ffecb3; }
+        .article-card:nth-child(10) { background-color: #ffe0b2; }
+        .article-card:nth-child(11) { background-color: #d1c4e9; }
+        .article-card:nth-child(12) { background-color: #c8e6c9; }
+        .article-card:nth-child(13) { background-color: #ffab91; }
+        .article-card:nth-child(14) { background-color: #ffcc80; }
+        .article-card:nth-child(15) { background-color: #dcedc8; }
+        .article-card:nth-child(16) { background-color: #f8bbd0; }
+        .article-card:nth-child(17) { background-color: #e1bee7; }
+        .article-card:nth-child(18) { background-color: #c5cae9; }
+        .article-card:nth-child(19) { background-color: #b2dfdb; }
+        .article-card:nth-child(20) { background-color: #fff9c4; }
+        .article-card:nth-child(21) { background-color: #ffccbc; }
+        .article-card:nth-child(22) { background-color: #d7ccc8; }
+        .article-card:nth-child(23) { background-color: #f0f4c3; }
+        .article-card:nth-child(24) { background-color: #ffecb3; }
+        .article-card:nth-child(25) { background-color: #ffe0b2; }
+        .article-card:nth-child(26) { background-color: #d1c4e9; }
+        .article-card:nth-child(27) { background-color: #c8e6c9; }
+        .article-card:nth-child(28) { background-color: #ffab91; }
+        .article-card:nth-child(29) { background-color: #ffcc80; }
+        .article-card:nth-child(30) { background-color: #dcedc8; }
+        .article-card:nth-child(31) { background-color: #f8bbd0; }
+        .article-card:nth-child(32) { background-color: #e1bee7; }
+        .article-card:nth-child(33) { background-color: #c5cae9; }
+        .article-card:nth-child(34) { background-color: #b2dfdb; }
+        .article-card:nth-child(35) { background-color: #fff9c4; }
+        .article-card:nth-child(36) { background-color: #ffccbc; }
+        .article-card:nth-child(37) { background-color: #d7ccc8; }
+        .article-card:nth-child(38) { background-color: #f0f4c3; }
+        .article-card:nth-child(39) { background-color: #ffecb3; }
+        .article-card:nth-child(40) { background-color: #ffe0b2; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Articles</h1>
+    </header>
+    <main>
+        <div class="articles-container">
+            {% for article in articles %}
+            <div class="article-card">
+                <h2>{{ article.title }}</h2>
+                <a href="{{ article.link }}" target="_blank">Read more</a>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>
